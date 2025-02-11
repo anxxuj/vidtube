@@ -9,7 +9,6 @@ type envelope map[string]any
 
 // Sends a JSON response with the given status code and headers.
 func (app *application) writeJSON(w http.ResponseWriter, status int, data envelope, headers http.Header) error {
-
 	js, err := json.MarshalIndent(data, "", "  ")
 	if err != nil {
 		return err
