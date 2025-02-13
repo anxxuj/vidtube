@@ -66,7 +66,7 @@ func main() {
 	}
 }
 
-// openDB Initializes a database connection pool.
+// openDB initializes a database connection pool.
 func openDB(cfg config) (*sql.DB, error) {
 	db, err := sql.Open("postgres", cfg.db.dsn)
 	if err != nil {
